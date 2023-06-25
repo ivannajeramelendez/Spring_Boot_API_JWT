@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "5f560b09-ef83-4e85-bcb6-ffe7113c18a6",
+		"name": "Vtesta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjY0NjQ5MDIzLCJqdGkiOiIxZDgyNGMyZC00ODQ5LTQ2MmMtOWZhOC1mMjJmZWU0YjhmNWIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiYWRtaW4iLCJuYmYiOjE2NjQ2NDkwMjMsImV4cCI6MTY2NzI0MTAyM30.dfe_-PsJWGVMbTp-uJtJwf3RZAyoo4_j7AtDnMaYpXg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/services/vtesta/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"services",
+						"vtesta",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login - token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/services/vtesta/auth/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"services",
+						"vtesta",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://vtesta.info",
+			"type": "default"
+		},
+		{
+			"key": "URL",
+			"value": "http://localhost:5000",
+			"type": "default",
+			"disabled": true
+		}
+	]
+}

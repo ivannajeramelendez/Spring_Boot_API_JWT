@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "40ce6d8b-acd9-42d8-b64d-4f617bd7f559",
+		"name": "APIS - Spring JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/usuario/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users Prioridad",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/usuario/query?prioridad=3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario",
+								"query"
+							],
+							"query": [
+								{
+									"key": "prioridad",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/usuario/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/usuario",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"nombre\": \"Ivan Najera\",\r\n    \"email\": \"ivan@gmail.com\",\r\n    \"prioridad\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/usuario",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Ivan Najera\",\r\n    \"email\": \"ivan@gmail.com\",\r\n    \"prioridad\": 1,\r\n    \"plan\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/usuario",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Planes",
+			"item": [
+				{
+					"name": "Get Planes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/usuario",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Ivan Najera\",\r\n    \"email\": \"ivan@gmail.com\",\r\n    \"prioridad\": 1,\r\n    \"plan\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/plan",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"plan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ivan\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdmFuIiwiZXhwIjoxNjY1ODczOTMxLCJpYXQiOjE2NjU4NTU5MzF9.e1VE1IYe8mLw50EJGXZR1XbIhJlzouy8qSHs2o-_R2dCRRk_MW7v6q8o-K5XVjfIJVpwVJmScvj4tQVmYrZPiA",
+			"type": "default"
+		}
+	]
+}
